@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    width: 100%;
+}
+
+h1 {
+    font-size: 1.5rem;
+    color: white;
+    text-transform: uppercase;
+    font-style: italic;
+    font-weight: 700;
+    letter-spacing: .5;
+    margin: 1px auto;
+}
+
+h2 {
+    font-size: 1.3rem;
+    color: white;
+    font-weight: 200;
+    }
+
+h3 {
+    font-size: 1rem;
+    color: #4f4d4e;
+   
+}
+
+header {
+    background-color: #414141;
+}
+
+.header {
+    border-bottom: 10px solid transparent; 
+    border-image: url(assets/Border-BG.jpg) 30 repeat;  
+}
+
+.__header-hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.__header-image {
+    display: flex;
+    justify-content: flex-start;
+    
+}
+
+.__header-image img {
+    max-width: 560px;
+}
+
+.__title-primary-decor {
+    color: #b5b5b5;
+    font-weight: lighter;
+}
+
+.__title-sub p {
+    color: #b5b5b5;
+    margin: 1rem 0;
+}
+
+.__button {
+    background-color: #4788c8;
+    color: white;
+    margin: .5rem auto;
+    padding: 1rem 2rem;
+    border: none;
+    border: 5px 1px 5px -1px rgba(0,0,0,.19);
+    font-size: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+    
+}
+
+.__header-button:hover {
+    background-color: white;
+    color: #4788c8;
+}
+
+.__slogan-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #4788c8;
+    position: relative;
+    padding: 0 2rem;
+    margin: 0 10%;
+}
+
+.__slogan-container::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    height: 40px;
+    width: 40px;
+    background-color: #4788c8;
+    clip-path: polygon(100% 0, 0 0, 0 100%);
+}
+
+.__slogan-text-decor {
+    font-weight: bold;
+    font-style: italic; 
+}
+
+.header-slogan-button {
+    background-color:#e4e4ee; 
+    color: #414141;
+}
+
+.__features {
+    background-color: #efefef;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0 10%;
+
+}
+
+.__features {
+     
+}
