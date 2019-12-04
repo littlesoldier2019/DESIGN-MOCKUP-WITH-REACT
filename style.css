@@ -4,10 +4,11 @@
     box-sizing: border-box
 }
 
-html {
+body {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
     width: 100%;
+    max-width: 1600px;
+    font-size: 16px;
 }
 
 h1 {
@@ -29,7 +30,24 @@ h2 {
 h3 {
     font-size: 1rem;
     color: #4f4d4e;
-   
+    font-weight: 700px;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+}
+
+h5 {
+    font-weight: lighter;
+    color: #3f3f3f;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    background-color: #efefef;
+    text-align: center;
+    margin: 0 43%;
+}
+
+.container {
+    padding: 0 10%;
+    margin: 0 auto;
 }
 
 header {
@@ -45,13 +63,10 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 10%;
 }
 
 .__header-image {
-    display: flex;
-    justify-content: flex-start;
-    
+    padding: 2rem;
 }
 
 .__header-image img {
@@ -93,7 +108,6 @@ header {
     background-color: #4788c8;
     position: relative;
     padding: 0 2rem;
-    margin: 0 10%;
 }
 
 .__slogan-container::after {
@@ -118,13 +132,112 @@ header {
 }
 
 .__features {
-    background-color: #efefef;
-    display: flex;
-    justify-content: space-evenly;
-    padding: 0 10%;
-
+    background-color:#efefef; 
 }
 
-.__features {
-     
+.___features-container {
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+
+.___features-container > div {
+    padding: 1rem;
+    margin: 4rem 0;
+}
+
+.___features-child {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+
+.___features-child:hover {
+    background-color: white;
+    box-shadow: 5px 3px 10px #888888;
+}
+
+.___features-child:hover::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    height: 40px;
+    width: 40px;
+    background-color: white;
+    clip-path: polygon(100% 0, 0 0, 0 100%);
+}
+
+.___features-child > h3, .___features-child > p, .___features-child > button {
+    padding: 1rem;
+}
+
+.circle-bg-for-icon {
+    height: 3rem;
+    width: 3rem;
+    padding: 1rem;
+    color: white;
+}
+
+.___features-child > div {
+    height: 3rem;
+    width: 3rem;
+    background-color: #414141;
+    border-radius: 50%;
+}
+
+.___features-child > div:hover {
+    background-color: #4788c8;
+}
+
+.features-text-decor {
+    font-weight: normal;
+}
+
+.___features-child > p {
+    text-align: center;
+}
+
+.___features-child > button {
+    background: #4788c8;
+    color: #fff;
+    padding: 1em 1.5em;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+    border-radius: 10%;
+    text-transform: uppercase;
+    font-weight: 400;
+    border-width: 2px;
+    border-style: outset;
+}
+
+.__recent-work {
+    background-color:#efefef;
+}
+
+.__section-title {
+    border-top: 10px solid transparent; 
+    border-image: url(assets/Border-BG.jpg) 30 repeat;  
+}
+
+.__section-title div {
+    margin-top: -0.7rem;
+}
+
+
+.__recent-work-container{ 
+    display: flex;
+    justify-content: space-between; 
+    margin: 2rem 1rem;
+}
+
+.__work {
+    margin: 1rem;
+}
+
+.__work img {
+    max-width: 300px;
 }
