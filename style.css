@@ -25,6 +25,7 @@ h2 {
     font-size: 1.3rem;
     color: white;
     font-weight: 200;
+    text-transform: uppercase;
     }
 
 h3 {
@@ -43,6 +44,21 @@ h5 {
     background-color: #efefef;
     text-align: center;
     margin: 0 43%;
+}
+
+h6 {
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 1rem 0 1rem 1.5rem;
+}
+
+p {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.arial-text {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
 }
 
 .container {
@@ -230,14 +246,127 @@ header {
 
 .__recent-work-container{ 
     display: flex;
-    justify-content: space-between; 
-    margin: 2rem 1rem;
+    justify-content:center; 
 }
 
 .__work {
-    margin: 1rem;
+    margin: 3rem 1rem 5rem 0;
+    position: relative;
+    border-bottom: 1px solid transparent;
+    background-color: white;
+    box-shadow: 5px 3px 10px #888888;
+}
+
+.__work:last-child {
+    margin-right: 0;
+}
+
+.__work::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    height: 40px;
+    width: 40px;
+    background-color: white;
+    border-top: 1px solid transparent;
+    clip-path: polygon(100% 0, 0 0, 0 100%);
 }
 
 .__work img {
-    max-width: 300px;
+    max-width: 100%;
 }
+
+.__work p {
+    padding: 1rem;
+}
+
+.__testi-dev {
+    background-color:#efefef;
+}
+
+.__testi-dev-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.__testimonials {
+    width: 65%;
+}
+
+.__development {
+    width: 35%;
+}
+
+.__testimonials-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin:2rem 0 3rem;
+}
+
+.__testimonials-child {
+    max-width: 49%;
+    margin: 4rem 0;
+    padding: 1rem;
+    background-color: white;
+    position: relative;
+    border-bottom: 1px solid transparent;
+    background-color: white;
+    box-shadow: 4px 2px 10px #888888;
+}
+
+.__testimonials-child::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    height: 40px;
+    width: 40px;
+    background-color: white;
+    border-top: 1px solid transparent;
+    clip-path: polygon(100% 0, 0 0, 0 100%);
+}
+
+
+.__footer-content {
+    background-color: #414141;
+    
+}
+
+.footer-content-container {
+    display: flex;
+    justify-content: flex-start;
+    padding: 7% 0 2% 0;
+}
+
+.__footer-content-child {
+    max-width: 23%;
+    margin-right: 1%;  
+}
+
+.__footer-content-child p {
+    padding: 1.5rem 1.6rem .5rem 0;
+    color: #8d8d8d;
+}
+
+.__lastest-tweets-decor {
+    color: white;
+}
+
+.latest-post > p {
+    border-bottom: 1px solid #222;
+    padding-left: 1rem;
+}
+
+.latest-post >p:last-child {
+    border-bottom:none;
+}
+
+.__footer-copyright {
+    background-color: #343434;
+    padding: 2% 10% 5% 10%;
+}
+
+
