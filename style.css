@@ -1,3 +1,4 @@
+/*---Common setting---*/
 * {
     margin: 0;
     padding: 0;
@@ -43,7 +44,6 @@ h5 {
     line-height: 1.5rem;
     background-color: #efefef;
     text-align: center;
-    margin: 0 43%;
 }
 
 h6 {
@@ -65,6 +65,8 @@ p {
     padding: 0 10%;
     margin: 0 auto;
 }
+
+/*---Header---*/
 
 header {
     background-color: #414141;
@@ -112,7 +114,7 @@ header {
     
 }
 
-.__header-button:hover {
+.__button:hover {
     background-color: white;
     color: #4788c8;
 }
@@ -124,6 +126,7 @@ header {
     background-color: #4788c8;
     position: relative;
     padding: 0 2rem;
+    border-bottom: 1px solid #4788c8;
 }
 
 .__slogan-container::after {
@@ -133,6 +136,7 @@ header {
     left: 0;
     height: 40px;
     width: 40px;
+    border-top: 1px solid #4788c8;
     background-color: #4788c8;
     clip-path: polygon(100% 0, 0 0, 0 100%);
 }
@@ -142,10 +146,12 @@ header {
     font-style: italic; 
 }
 
-.header-slogan-button {
+.slogan-button {
     background-color:#e4e4ee; 
     color: #414141;
 }
+
+/*---Section 1: Features---*/
 
 .__features {
     background-color:#efefef; 
@@ -154,6 +160,7 @@ header {
 .___features-container {
     display: flex;
     justify-content: space-evenly;
+    padding-top: 2rem;
     
 }
 
@@ -199,11 +206,12 @@ header {
     text-align: center;
 }
 
-.___features-child > button {
+.___features-child button,
+.___features-child-overlay button {
     background: #4788c8;
     color: #fff;
     padding: 1em 1.5em;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     font-size: 1rem;
     border-radius: 10%;
     text-transform: uppercase;
@@ -214,7 +222,7 @@ header {
 
 .___features-child-overlay {
     position: absolute;
-    top: 0;
+    top: -10%;
     bottom: 0;
     left: 0;
     right: 0;
@@ -236,8 +244,8 @@ header {
     width: 3rem;
     background-color: #4788c8;
     border-radius: 50%;
-    margin: 3rem 0 1rem 0;
-    transform: scale(1.4);
+    margin: 2rem 0 1rem 0;
+    transform: scale(1.3);
 }
 
 .___features-child-overlay > h3 {
@@ -265,24 +273,45 @@ header {
     opacity: 1;
 }
 
+/*---Section 2: Recent work---*/
 
 .__recent-work {
     background-color:#efefef;
 }
 
 .__section-title {
+    position: relative;
+}
+
+.__section-title::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 10px;
+    width: 100%;
     border-top: 10px solid transparent; 
-    border-image: url(assets/Border-BG.jpg) 30 repeat;  
+    border-image: url(assets/Border-BG.jpg) 30 repeat; 
+    z-index: 1;
 }
 
 .__section-title div {
-    margin-top: -.7rem;
+    background-color: #efefef;
+    position: absolute;
+    top: -.5rem;
+    left: 0;
+    right:0;
+    padding: 0 1rem;
+    width: fit-content;
+    margin: 0 auto;
+    z-index: 2;
 }
 
 
 .__recent-work-container{ 
     display: flex;
     justify-content:center; 
+    padding: 2rem 0 5rem;
 }
 
 .__work {
@@ -317,6 +346,8 @@ header {
     padding: 1rem;
 }
 
+/*---Section 3: Testimonials & Development---*/
+
 .__testi-dev {
     background-color:#efefef;
 }
@@ -327,11 +358,12 @@ header {
 }
 
 .__testimonials {
-    width: 65%;
+    width: 67%;
+    margin-right: 1rem;
 }
 
 .__development {
-    width: 35%;
+    width: 33%;
 }
 
 .__testimonials-container {
@@ -365,10 +397,88 @@ header {
     clip-path: polygon(100% 0, 0 0, 0 100%);
 }
 
+.pc-tab > input,
+.pc-tab section > div {
+  display: none;
+}
+
+#tab1:checked ~ section .tab1,
+#tab2:checked ~ section .tab2,
+#tab3:checked ~ section .tab3 {
+  display: block;
+}
+
+.pc-tab { 
+    width: 100%;
+    margin: 4rem auto 8rem auto;
+}
+    
+.pc-tab ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+}
+
+.tab-title {
+    padding: 0;
+    font-size: 1.17rem;
+}
+
+li label {
+    float: left;
+    padding: 0 1.5rem 0 0;
+    border: 1px solid #ddd;
+    border-bottom: 0;
+    background: #E4E4EE;
+}
+ 
+.pc-tab section {
+    clear: both;
+    padding: 1rem 1rem 5rem 1rem;
+    position: relative;
+    box-shadow: 1px 2px 5px #888888;
+    background-color: white;
+}
+
+.tab1 p, .tab2 p {
+    padding: 1rem 0;
+}
+
+#tab1:checked ~ nav .tab1 label,
+#tab2:checked ~ nav .tab2 label {
+    background-color: white;
+    color: #111;
+    position: relative;
+} 
+
+#tab1:checked ~ nav .tab1 label::after,
+#tab2:checked ~ nav .tab2 label::after {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background: $activeColor;
+    left: 0;
+    bottom: -1px;
+}
+
+.__development-button {
+    position: absolute;
+    right: 1.5rem;
+    bottom: 1rem;
+    cursor: pointer;
+}
+
+.__development-button:hover {
+    color: ;
+}
+
+/*---Footer---*/
 
 .__footer-content {
     background-color: #414141;
-    
 }
 
 .footer-content-container {
@@ -378,7 +488,7 @@ header {
 }
 
 .__footer-content-child {
-    max-width: 23%;
+    width: 24%;
     margin-right: 1%;  
 }
 
@@ -407,12 +517,11 @@ header {
     flex-wrap: wrap;
     height: 100%;
     width: 100%;
-    padding: 1rem 2rem 1rem 0;
 }
 
 .__flickr-image {
-    height: 30%;
-    width: 30%;
+    height: 26%;
+    width: 24%;
     background-color:#222;
     padding: 1rem;
 }
@@ -450,13 +559,13 @@ header {
 
 .tooltip-text {
     visibility: hidden;
-    background-color: black;
+    background-color: #4F4D4E;
     margin: .5rem;
     padding: .5rem;
-    color: #8d8d8d;
+    color: white;
     font-family: Arial,Helvetica,sans-serif;
     text-align: center;
-    border-radius: 6px;
+    border-radius: 6px 6px 6px 0;
     position: absolute;
     top:-150%;
     left: 5%;
@@ -467,9 +576,9 @@ header {
     position: absolute;
     top: 100%;
     left: 0;
-    height: 40px;
-    width: 40px;
-    background-color: white;
+    height: 15px;
+    width: 15px;
+    background-color: #4F4D4E;
     clip-path: polygon(100% 0, 0 0, 0 100%);
 }
 
