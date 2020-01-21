@@ -1,2 +1,2 @@
 # DESIGN-MOCKUP-WITH-REACT
-Building website with HTML and CSS, preudo and flexbox
+Building a static website with pure HTML and CSS: practice preudo and flexbox
